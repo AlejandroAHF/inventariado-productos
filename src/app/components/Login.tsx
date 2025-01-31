@@ -78,7 +78,7 @@ const LoginForm = () =>  {
 
           {/* Footer Links */}
           <div className="flex justify-between text-sm font-mono mt-4">
-            <Link href={"/Register"} className={"underline hover:no-underline"}>Registrarse</Link>
+            <Link href={"/register"} className={"underline hover:no-underline"}>Registrarse</Link>
           </div>
         </form>
       </div>

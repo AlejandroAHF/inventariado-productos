@@ -110,7 +110,7 @@ const Register = () => {
 
           {/* Footer Links */}
           <div className="flex justify-between text-sm font-mono mt-4">
-            <Link href={"/Login"} className={"underline hover:no-underline"}> ¿Ya tienes una cuenta? Inicia sesión </Link>
+            <Link href={"/login"} className={"underline hover:no-underline"}> ¿Ya tienes una cuenta? Inicia sesión </Link>
           </div>
         </form>
       </div>
