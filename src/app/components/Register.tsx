@@ -1,12 +1,13 @@
 "use client"; // Necesario si usas Next.js App Router
 
-import { Lock, User, Mail, Link } from "lucide-react";
+import { Lock, User, Mail} from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { RegisterFormInputs } from "@/Interfaces/Register.interfaces";
 import { registerUser } from "@/Services/Register.services";
 import { useRouter } from "next/navigation"; // Usar "next/router" si usas Pages Router
 import Button from "./ui/Button";
+import Link from "next/link";
 
 const Register = () => {
   const { register, handleSubmit } = useForm<RegisterFormInputs>();
@@ -26,7 +27,7 @@ const Register = () => {
 
       setSuccessMessage("¡Registro exitoso! Redirigiendo...");
       setTimeout(() => {
-        router.push("/Login"); // Redirigir al login tras el registro
+        router.push("/login"); // Redirigir al login tras el registro
       }, 2000);
     } catch (err) {
       if (err instanceof Error) {

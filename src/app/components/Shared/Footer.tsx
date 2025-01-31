@@ -2,7 +2,11 @@
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer>
+        <div>
+            <p>Copyright 2025. Kodigo :D</p>
+        </div>
+    </footer>
   )
 }
 
