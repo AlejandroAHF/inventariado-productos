@@ -1,6 +1,6 @@
 "use client"; // Necesario si usas Next.js App Router
 
-import { Lock, User, Mail } from "lucide-react";
+import { Lock, User, Mail, Link } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { RegisterFormInputs } from "@/Interfaces/Register.interfaces";
@@ -26,7 +26,7 @@ const Register = () => {
 
       setSuccessMessage("¡Registro exitoso! Redirigiendo...");
       setTimeout(() => {
-        router.push("/login"); // Redirigir al login tras el registro
+        router.push("/Login"); // Redirigir al login tras el registro
       }, 2000);
     } catch (err) {
       if (err instanceof Error) {
@@ -110,9 +110,7 @@ const Register = () => {
 
           {/* Footer Links */}
           <div className="flex justify-between text-sm font-mono mt-4">
-            <a href="/login" className="underline hover:no-underline">
-              ¿Ya tienes una cuenta? Inicia sesión
-            </a>
+            <Link href={"/Login"} className={"underline hover:no-underline"}> ¿Ya tienes una cuenta? Inicia sesión </Link>
           </div>
         </form>
       </div>
