@@ -1,13 +1,13 @@
-'use client';
+"use client";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { LoginFormInputs } from "@/Interfaces/login.interfaces";
 import { loginUser } from "@/Services/Login.services";
 import { Lock, Mail } from "lucide-react";
 import Button from "./ui/Button";
-import Link from 'next/link'
+import Link from "next/link";
 
-const LoginForm = () =>  {
+const LoginForm = () => {
   const { register, handleSubmit } = useForm<LoginFormInputs>();
   const [error, setError] = useState<string | null>(null);
 
@@ -73,17 +73,25 @@ const LoginForm = () =>  {
 
           {/* Button */}
           <div className="mt-6">
-            <Button text="INGRESAR →" bgColor="bg-[#CEFF1A]" type="submit"/>
+            <Button text="INGRESAR →" bgColor="bg-[#CEFF1A]" type="submit" />
           </div>
 
           {/* Footer Links */}
-          <div className="flex justify-between text-sm font-mono mt-4">
-            <Link href={"/register"} className={"underline hover:no-underline"}>Registrarse</Link>
+          <div className="flex justify-between text-sm font-mono mt-2">
+            <Link href={"/register"} className={"underline hover:no-underline"}>
+              Registrarse
+            </Link>
+          </div>
+          <div className="flex justify-between text-sm font-mono mt-2">
+            <Link href={"/"} className={"underline hover:no-underline"}>
+              {" "}
+              Volver al inicio
+            </Link>
           </div>
         </form>
       </div>
     </div>
   );
-}
+};
 
 export default LoginForm;

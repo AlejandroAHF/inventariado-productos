@@ -1,6 +1,6 @@
 "use client"; // Necesario si usas Next.js App Router
 
-import { Lock, User, Mail} from "lucide-react";
+import { Lock, User, Mail } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { RegisterFormInputs } from "@/Interfaces/Register.interfaces";
@@ -48,8 +48,14 @@ const Register = () => {
         </div>
 
         {/* Mensajes de error o éxito */}
-        {error && <p className="text-red-500 font-mono text-sm mb-4">{error}</p>}
-        {successMessage && <p className="text-green-500 font-mono text-sm mb-4">{successMessage}</p>}
+        {error && (
+          <p className="text-red-500 font-mono text-sm mb-4">{error}</p>
+        )}
+        {successMessage && (
+          <p className="text-green-500 font-mono text-sm mb-4">
+            {successMessage}
+          </p>
+        )}
 
         {/* Formulario */}
         <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
@@ -103,7 +109,7 @@ const Register = () => {
               />
             </div>
           </div>
-      
+
           {/* Button (Falta type="submit") */}
           <div className="mt-6">
             <Button text="REGISTRARSE →" bgColor="bg-[#CEFF1A]" type="submit" />
@@ -111,7 +117,16 @@ const Register = () => {
 
           {/* Footer Links */}
           <div className="flex justify-between text-sm font-mono mt-4">
-            <Link href={"/login"} className={"underline hover:no-underline"}> ¿Ya tienes una cuenta? Inicia sesión </Link>
+            <Link href={"/login"} className={"underline hover:no-underline"}>
+              {" "}
+              ¿Ya tienes una cuenta? Inicia sesión{" "}
+            </Link>
+          </div>
+          <div className="flex justify-between text-sm font-mono mt-2">
+            <Link href={"/"} className={"underline hover:no-underline"}>
+              {" "}
+              Volver al inicio
+            </Link>
           </div>
         </form>
       </div>
