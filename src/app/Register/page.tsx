@@ -1,7 +1,7 @@
 import Register from "../components/Register"
 
 
-const Page = () => {
+const page = () => {
   return (
     <>
         <Register />
@@ -9,4 +9,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default page
