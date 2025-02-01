@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Gestion de pedidos",
-  description: "aplicacion de gestion de pedidos",
+  description: "aplicacion de gestion de productos",
 };
 
 export default function RootLayout({
